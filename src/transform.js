@@ -27,8 +27,8 @@ function groupAdultsByAgeRange(people) {
     }  
     return ageGroup
         
-},result)
-console.log("WHAT IS FILTRD 2", filtered)
+    },result)
+
     
     filtered.reduce((ageGroup, currentPerson) => {
         if (currentPerson.age <= 20) {
@@ -49,9 +49,10 @@ console.log("WHAT IS FILTRD 2", filtered)
         
         return ageGroup
         
-    },result)
+        },result)
+        
     return result
-}
+    }
 
 
 const grouping = groupAdultsByAgeRange([
@@ -76,65 +77,4 @@ const grouping = groupAdultsByAgeRange([
 
   console.log("WHAT DOES MY FUNCTION OUTPUT????????????", grouping)
 
-
-
-
 module.exports = {groupAdultsByAgeRange}
-
-
-
-
-/*
-
- These are the groups that your code needs to return. Use the text as the name of the property:
-    - `20 and younger`
-    - `21-30`
-    - `31-40`
-    - `41-50`
-    - `51 and older`
-
-
-const grouping = groupAdultsByAgeRange([
-    { name: "pete", age: 10 },
-    { name: "dove", age: 17 },
-    { name: "dave", age: 18 },
-    { name: "hall", age: 19 },
-    { name: "donn", age: 20 },
-    { name: "trey", age: 21 },
-    { name: "hann", age: 29 },
-    { name: "chew", age: 30 },
-    { name: "cloe", age: 31 },
-    { name: "dart", age: 39 },
-    { name: "this", age: 40 },
-    { name: "dame", age: 41 },
-    { name: "henk", age: 49 },
-    { name: "anna", age: 50 },
-    { name: "olga", age: 51 },
-    { name: "bert", age: 52 },
-    { name: "oldd", age: 120 },
-  ])
-  assert.deepStrictEqual(grouping,
-    {
-      '20 and younger':
-        [{ name: 'dave', age: 18 },
-        { name: 'hall', age: 19 },
-        { name: 'donn', age: 20 }],
-      '21-30':
-        [{ name: 'trey', age: 21 },
-        { name: 'hann', age: 29 },
-        { name: 'chew', age: 30 }],
-      '31-40':
-        [{ name: 'cloe', age: 31 },
-        { name: 'dart', age: 39 },
-        { name: 'this', age: 40 }],
-      '41-50':
-        [{ name: 'dame', age: 41 },
-        { name: 'henk', age: 49 },
-        { name: 'anna', age: 50 }],
-      '51 and older':
-        [{ name: 'olga', age: 51 },
-        { name: 'bert', age: 52 },
-        { name: 'oldd', age: 120 }]
-    }
-
-    */
