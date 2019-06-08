@@ -3,7 +3,7 @@ module.exports = class ShoppingCart {
         this.cartContents = []
     }
     addItem(itemName, quantity, price) {
-        const item = {name: itemName, quantity: quantity, pricePerUnit: price }
+        const item = { name: itemName, quantity: quantity, pricePerUnit: price }
         return this.cartContents.push(item)
     }
     getItems() {
@@ -14,7 +14,7 @@ module.exports = class ShoppingCart {
     }
     total() {
         return this.cartContents.reduce((totalPrice, currentItem) => {
-                return totalPrice + (currentItem.quantity * currentItem.pricePerUnit)
+            return totalPrice + (currentItem.quantity * currentItem.pricePerUnit)
         }, 0)
     }
 
