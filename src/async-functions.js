@@ -4,8 +4,8 @@ function getTatooineResidents() {
     return new Promise(function (resolve, reject) {
     superagent
     .get("https://swapi.co/api/planets/1/")
-    .then((res) => res.body.residents) 
-    .catch((error) => console.log(error))
+    .then((res) => resolve(res.body.residents)) 
+    .catch((error) => reject(error))
     })
 }
 
